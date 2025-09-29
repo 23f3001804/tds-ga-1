@@ -2,7 +2,7 @@ name: Cache Demo
 
 on:
   workflow_dispatch: # Run manually
-  push:              # Also run on every push
+  push:              # Run on pushes to main
     branches:
       - main
 
@@ -13,7 +13,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: prime-cache-877a5a9
+      - name: prime-cache-877a5a9   # 🔑 required step name
         id: cache-step
         uses: actions/cache@v4
         with:
